@@ -8,11 +8,12 @@ $nIconWidth:  60px;
 
 body  {
   margin:	    $nMargin;
-  overflow-x: hidden;
-  text-align: justify;
+  overflow-x: hidden
+              !important;
 }
 
 @import './header.scss';
+@import './incoming.scss';
 
 /*#Chat                       { margin-right: 106px;}*/
 
@@ -49,18 +50,6 @@ body  {
 .buddyicon:hover .name      { height:auto; overflow:normal; margin-bottom:.2em;}
 .buddyicon .timestamp       { float: none; line-height: 1em;}
 .buddyicon .timestamp .date { display: inline !important; font-weight: normal;}
-
-.timestamp
-{	float:		right;
-	font-size:	.8em;
-}
-
-.timestamp .time            { font-weight: normal; padding: 0 .3em; }
-.timestamp .date            { display: none; }
-.timestamp:hover	.date,
-.timestamp:active	.date
-{	display:	inline;
-}
 
 .incoming,
 .outgoing
