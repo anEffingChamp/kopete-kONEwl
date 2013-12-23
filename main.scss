@@ -1,17 +1,18 @@
 $nMargin:	    2px;
+$nPadding:    2px;
 $nIconHeight: 60px;
+$nIconWidth:  60px;
 
 /*	BASE style
  */
 
 body  {
   margin:	    $nMargin;
+  overflow-x: hidden;
   text-align: justify;
 }
 
-#header {
-  min-height: $nIconHeight;
-}
+@import './header.scss';
 
 /*#Chat                       { margin-right: 106px;}*/
 
@@ -22,12 +23,11 @@ body  {
   border:		solid 1px;
 	height:		$nIconHeight;
 	overflow:	hidden;
-	padding:		2px;
+	padding:	$nPadding;
 	position:	fixed;
 		right:	4px;
-	text-align:	center;
-	width:		40px;
-   z-index:		0;
+	width:		$nIconWidth;
+   z-index:	0;
 }
 
 .buddyicon:hover  {
