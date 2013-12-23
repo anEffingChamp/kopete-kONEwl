@@ -1,0 +1,18 @@
+<div style="color:%senderColor%; background-color:%senderColor%; border-color: %senderColor%">
+  <div class="outgoing">
+    <div style="background-color: %textbackgroundcolor{}%; border-color: inherit;">
+<!--      <div class="sender %messageDirection%">
+        <span class="selector">&nbsp;</span>
+
+<br class="copyonly" />
+<span class="nick">%sender%<span class="sid"><img src="%senderStatusIcon%" />%senderScreenName%</span><img class="icon" src="%userIconPath%" /></span>
+      </div>
+-->
+      <div class="content %messageDirection%">
+        <span class="timestamp"><b class="date">%time{%x}%</b><b class="time">%time{%H:%M}%</b></span><b class="formatted">&nbsp;</b>
+        <span class="marker">&raquo;&nbsp;</span><span class="message">%message%</span>
+      </div>
+    </div>
+    <div id="insert" /><div />
+  </div>
+</div>

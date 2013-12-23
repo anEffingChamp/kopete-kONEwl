@@ -1,0 +1,65 @@
+@import('../main.css');
+
+/* System colors _tryes_ to follow your desktop color scheme.
+--------------------------------------------------------------------- */
+
+body                    { background-color: ButtonFace; }
+.action                 { border-color: ButtonHighlight; border: solid 1px; }
+.action,
+.internal               { border-width: 1px 0 0 0; border-style: dotted; margin: 0px; }
+
+.incoming,
+.outgoing               { color: ButtonText; background-color: ButtonFace;
+                          border-color: ButtonText; border-top: dotted 1px; }
+.incoming > DIV,
+.incoming .sender,
+.incoming .nextcontent,
+.incoming.action,
+.incoming.buddyicon     { background-image: url('ALPHA10.png'); }
+.outgoing > DIV,
+.outgoing .sender,
+.outgoing .nextcontent,
+.outgoing.action,
+.outgoing.buddyicon     { background-image: url('DARK5.png'); }
+.incoming a:link,
+.outgoing a:link,
+.message,
+.buddyicon              { color: ButtonText; }
+
+.internal               { color: Highlight; background-color: Highlight;
+                          border-color: Highlight;
+                          background-image: url('ALPHA90.png'); }
+.internal a:link        { color: Highlight; }
+
+.buddyicon              { background-color: ButtonFace;
+                          border-color: ButtonText; border: solid 1px; }
+.buddyicon .name        { background-image: none; }
+
+/* BASE Style + This = COMPACT.
+------------------------------------------------ */
+.sender                     { float: left; width: 10em; }
+.sender .selector           { width: auto; }
+.sender .nick               { width: 9.5em; font-size: 1em; padding: 1px 0 0 0;
+                              text-align: right; }
+.sender .nick:active        { width: auto; text-align: left; padding: 1px 2px 2px 2px; }
+.sender .nick:active .sid   { font-size: .9em; }
+.content                    { clear: none; }
+.nextcontent                { padding-left: 10em; }
+.action,
+.internal                   { border-width: 1px 0 0 0; margin: 0px; }
+.action .author             { font-size: .8em; display: block; float: left; width: auto;
+                              line-height: 1em;  }
+.action .message            { font-size: .8em; display: block; float: left;
+                              line-height: 1em; }
+.action .timestamp          { font-size: .8em; }
+.rtl.sender                 { float: right; }
+.rtl.sender .nick           { text-align: left; }
+.rtl.sender .nick:active    { text-align: left; }
+.rtl.nextcontent            { padding-left: 0em; padding-right: 10em; }
+.rtl.action .author,
+.rtl.action .message        { float: right; }
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+.banner                     { display: none; }

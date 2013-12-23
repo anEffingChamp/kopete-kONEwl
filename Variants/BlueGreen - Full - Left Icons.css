@@ -1,0 +1,12 @@
+@import('../main.css');
+
+/* BASE Style + This = Icons at left side.
+------------------------------------------------ */
+#Chat                       { margin-right: 0px; margin-left: 106px; }
+.buddyicon                  { position: fixed; left: 4px; }
+.rtl.sender .nick:active    { right: 11px; }
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+.banner                     { display: none; }

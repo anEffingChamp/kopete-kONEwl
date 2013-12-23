@@ -1,0 +1,11 @@
+<!-- This banner will be removed on 2.0 final release -->
+<div class="banner">
+  <p>
+    <b>Version 2.0:</b><br /><br />
+    This is the 2.0 version of kONE chat style.<br />
+    Please, submit bugs or suggestions <a href="http://kde-look.org/content/show.php/kONE?content=36477">here</a>.<br /><br />
+    It is strongly recommended to <u>restart Kopete</u> after update this theme.<br /><br />
+    <i>This banner is hidden when you selects a Variant other than default.<br />Go to the config dialog and select a Variant if you are looking this in the chat window.</i><br /><br />
+    If you have done new Variants of kONE, please, send it to <a href="mailto:hello@kanutron.net">hello@kanutron.net</a>.<br /><br />Thanks and Enjoy!
+  </p>
+</div>

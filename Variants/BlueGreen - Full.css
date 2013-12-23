@@ -1,0 +1,10 @@
+@import('../main.css');
+
+/*
+  There is no need to put code here. ;-)
+*/
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+.banner                     { display: none; }

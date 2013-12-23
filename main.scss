@@ -1,0 +1,195 @@
+$nMargin:	    2px;
+$nIconHeight: 60px;
+
+/*	BASE style
+ */
+
+body  {
+  margin:	    $nMargin;
+  text-align: justify;
+}
+
+#header {
+  min-height: $nIconHeight;
+}
+
+/*#Chat                       { margin-right: 106px;}*/
+
+.copyonly                   { display: none; }
+.formatted                  { visibility: hidden; position: absolute; }
+
+.buddyicon  {
+  border:		solid 1px;
+	height:		$nIconHeight;
+	overflow:	hidden;
+	padding:		2px;
+	position:	fixed;
+		right:	4px;
+	text-align:	center;
+	width:		40px;
+   z-index:		0;
+}
+
+.buddyicon:hover  {
+  height:	auto;
+	width:	100%;
+    max-width:  2 * $nIconHeight;
+}
+
+.buddyicon.outgoing {
+  display:  none;
+  top:      80px;
+}
+
+.buddyicon.incoming         { top: 4px; z-index: 1;}
+.buddyicon img              { width: 100%; margin-bottom: -.3em;}
+.buddyicon .name            { height:1.3em; text-align:left; font-size:.8em;
+                              overflow: hidden; width: 96px; margin:0px;
+                              line-height: 1.2em; }
+.buddyicon:hover            { z-index: 10; }
+.buddyicon:hover .name      { height:auto; overflow:normal; margin-bottom:.2em;}
+.buddyicon .timestamp       { float: none; line-height: 1em;}
+.buddyicon .timestamp .date { display: inline !important; font-weight: normal;}
+
+.timestamp
+{	float:		right;
+	font-size:	.8em;
+}
+
+.timestamp .time            { font-weight: normal; padding: 0 .3em; }
+.timestamp .date            { display: none; }
+.timestamp:hover	.date,
+.timestamp:active	.date
+{	display:	inline;
+}
+
+.incoming,
+.outgoing
+{	border-top:	solid
+			1px;
+	clear:		both;
+	height:		auto;
+	overflow:	hidden;
+}
+
+.action,
+.internal                   { line-height: .9em; padding: .3em 0 .3em .3em;
+                              border: solid 1px; border-color: inherit;
+                              margin: .3em 0px;}
+
+.action .author             { display:block; font-size:.9em; font-weight:bold;}
+.action .message            { color: inherit; }
+.internal .message          { color: inherit; font-size: .8em; display: block;
+                              float: left; }
+.sender                     { border-color: inherit; background-color: inherit;}
+.sender .selector,
+.sender .nick               { font-size: .95em; line-height: 1.1em;
+                              display: block; float: left; height: 1.2em; }
+.sender .nick               { font-weight: bold; max-width: 16em;
+                              overflow: hidden; padding: 0px .3em;}
+.sender .selector           { width: 8px; }
+.sender .icon               { display: none; margin: .3em 0px; }
+.sender .sid                { display: none; font-weight: normal;
+                              font-style: italic; font-size: .95em }
+.sender .sid img            { height: 1em; max-height: 16px; margin: 0 .3em;
+                              vertical-align: text-bottom; }
+.sender .nick:active        { position: absolute; margin: -1px 0px 0px 7px;
+                              height: auto; max-width: 90%; z-index: 10;
+                              background-image: url('./Variants/DARK5.png');
+                              overflow: visible; padding: 0px .3em;
+                              background-color: inherit; display: inline;
+                              border: solid 1px inherit; }
+.sender .nick:active .sid   { display: block; }
+.sender a:hover             { text-decoration: none; }
+.sender a:active,
+.sender a:focus             { outline: none; }
+
+.content
+{	display:	inline;
+}
+.message a                  { font-weight: bold; font-size: .9em;}
+
+/*	jonathan@smalls.cc	2012 August 21
+ *	I wanted to be able to see the links that people sent.
+ *
+ *	.message a + a              { display: none; }
+ */
+
+.message a                  { text-decoration: underline; }
+.message p                  { margin: 0px; display: inline; }
+
+.content, .nextcontent,
+.action, .internal          { overflow: auto; }
+.timestamp, .buddyicon      { cursor: default; }
+
+/* RTL Support for the BASE style
+------------------------------------------------ */
+
+.rtl                        { direction: rtl; }
+.rtl .timestamp
+{	float: left;
+}
+.rtl .date                  { padding-left: .3em; }
+.rtl.sender .selector,
+.rtl.sender .nick           { float: right; }
+.rtl.sender .nick:active    { right: 117px; }
+.rtl.action,
+.rtl.internal               { padding: .3em .3em .3em 0; }
+.rtl.internal .message      { float: right; }
+
+/* Blue & Green color style. The [default|best] one...
+--------------------------------------------------------------------- */
+
+body                        { background-color: #fff; }
+.internal                   { color: #aa00aa; border-color: #eeaaee; background-color:#ffeeff; }
+.internal a:link            { color: #aa00aa; }
+.incoming                   { color: #1e5996; border-color: #c7d5e5; background-color: #f1f4f8; }
+.incoming a:link            { color: #1e5996; }
+.outgoing                   { color: #68ae0d; border-color: #d9ebc2; background-color: #f5faf0; }
+.outgoing a:link            { color: #68ae0d; }
+.message                    { color: #000; }
+.message a:hover            { color: inherit; text-decoration: underline; }
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+
+.banner                     { position: absolute; z-index: 5;
+                              top: 0px; left: 0px; width: 100%; height: 100%;
+                              vertical-align: middle; display: table-cell; }
+.banner p                   { padding: 1em; font-size: .9em; color: #aa0000;
+                              border-color: #ee0000; background-color:#ffeeee;
+                              border: solid 2px; margin: 5em; line-height: 1em;}
+.banner b                   { font-size: 1.2em; }
+.banner i                   { font-size: .9em; }
+.banner a                   { color: inherit; font-weight: bold;  }
+
+/* Contact colors. Uses a random color for each contact in the chat.
+--------------------------------------------------------------------- */
+.nick:active a:link,
+.nick:active a:visited      { color: white !important; }
+.incoming,
+.outgoing                   { color: inherit; background-color: inherit;
+                              border-color: inherit; border-top: dotted 1px; }
+.incoming, .incoming > DIV,
+.outgoing, .outgoing > DIV,
+.sender                     { background-image: url('Variants/ALPHA90.png'); }
+.incoming a:link,
+.outgoing a:link            { color: inherit; }
+.message                    { color: #000; }
+.action, .internal          { border: dotted 1px; }
+.buddyicon                  { color: #aaa; background-color: #bbb;
+                              border-color: #aaa; border: solid 1px;}
+.buddyicon .name            { background-color: inherit; }
+
+/* BASE Style + This = No icons.
+------------------------------------------------ */
+#Chat                       { margin-right: 0px; }
+/*.buddyicon                  { display: none; }	*/
+.rtl.sender .nick:active    { right: 11px; }
+.sender .nick:active .icon  { display: block; }
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+.banner                     { display: none; }

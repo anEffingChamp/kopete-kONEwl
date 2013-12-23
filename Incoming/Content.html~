@@ -1,0 +1,25 @@
+<div style="color:%senderColor%; background-color:%senderColor%; border-color: %senderColor%">
+  <div class="incoming">
+    <div style="background-color: %textbackgroundcolor{}%; border-color: inherit;">
+<!--      <div class="sender %messageDirection%">
+        <span class="selector">&nbsp;</span>
+<br class="copyonly" />
+<span class="nick">%sender%<span class="sid"><img src="%senderStatusIcon%" />%senderScreenName%</span><img class="icon" src="%userIconPath%" /></span>
+      </div>
+-->	<div	class	=	"content %messageDirection%"
+				style	=	'padding-top:	5px;'
+		>
+		<span	class		=	"timestamp"
+				onclick	=	"ShowChild('date')";
+		>
+        	<b	class	=	"date"	>	%sender%	%time{%x}%	</b>
+        	<b class	=	"time"	>	%time{%H%M.%S}%		</b>
+		</span>
+		<b class="formatted">	&nbsp;	</b>
+<span class="marker">&raquo;&nbsp;</span>
+<span class="message">%message%</span>
+      </div>
+    </div>
+    <div id="insert" /><div />
+  </div>
+</div>

@@ -1,0 +1,30 @@
+@import('../main.css');
+
+/* Contact colors. Uses a random color for each contact in the chat.
+--------------------------------------------------------------------- */
+.nick:active a:link,
+.nick:active a:visited      { color: white !important; }
+.incoming,
+.outgoing                   { color: inherit; background-color: inherit;
+                              border-color: inherit; border-top: dotted 1px; }
+.incoming, .incoming > DIV,
+.outgoing, .outgoing > DIV,
+.sender                     { background-image: url('ALPHA90.png'); }
+.incoming a:link,
+.outgoing a:link            { color: inherit; }
+.message                    { color: #000; }
+.action, .internal          { border: dotted 1px; }
+.buddyicon                  { color: #aaa; background-color: #bbb;
+                              border-color: #aaa; border: solid 1px;}
+.buddyicon .name            { background-color: inherit; }
+
+/* BASE Style + This = Icons at left side.
+------------------------------------------------ */
+#Chat                       { margin-right: 0px; margin-left: 106px; }
+.buddyicon                  { position: fixed; left: 4px; }
+.rtl.sender .nick:active    { right: 11px; }
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+.banner                     { display: none; }

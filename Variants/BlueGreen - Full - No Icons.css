@@ -1,0 +1,13 @@
+@import('../main.css');
+
+/* BASE Style + This = No icons.
+------------------------------------------------ */
+#Chat                       { margin-right: 0px; }
+.buddyicon                  { display: none; }
+.rtl.sender .nick:active    { right: 11px; }
+.sender .nick:active .icon  { display: block; }
+
+/* BETA Banner only in config dialog.
+   This code will be remmoved on the official release.
+--------------------------------------------------------------------- */
+.banner                     { display: none; }
