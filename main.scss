@@ -1,7 +1,6 @@
 $nMargin:	    1px;
 $nPadding:    1px;
 $nIconHeight: 60px;
-$nIconWidth:  60px;
 
 /*	BASE style
  */
@@ -21,12 +20,14 @@ body  {
 .formatted                  { visibility: hidden; position: absolute; }
 
 .buddyicon  {
-  border:		solid 1px;
+  border:		dotted
+            #000000
+            $nPadding;
 	height:		$nIconHeight;
 	overflow:	hidden;
 	position:	fixed;
-		right:	4px;
-	width:		$nIconWidth;
+		right:	2 * $nMargin;
+	width:		$nIconHeight;
    z-index:	0;
 }
 
@@ -38,7 +39,7 @@ body  {
 
 .buddyicon.outgoing {
   display:  none;
-  top:      80px;
+  top:      $nIconHeight;
 }
 
 .buddyicon.incoming         { top: 4px; z-index: 1;}
