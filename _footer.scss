@@ -1,0 +1,46 @@
+.buddyicon  {
+  border:		dotted
+            #000000
+            $nPadding;
+	height:		$nIconHeight;
+	overflow:	hidden;
+	position:	fixed;
+		right:	  2 * $nMargin;
+	width:		$nIconHeight;
+    z-index:  0;
+
+  &:hover  {
+    height:	  auto;
+    width:	  100%;
+      max-width:  2 * $nIconHeight;
+    z-index:  10;
+
+    .name {
+      height:auto; overflow:normal; margin-bottom:.2em;
+    }
+  }
+
+  img {
+    width: 100%; margin-bottom: -.3em;
+  }
+
+  .name {
+    height:1.3em; text-align:left; font-size:.8em;
+                              overflow: hidden; width: 96px; margin:0px;
+                              line-height: 1.2em;
+  }
+
+  .timestamp  {
+    float: none; line-height: 1em;
+    
+    .date {
+      display: inline !important; font-weight: normal;
+} } }
+
+
+.buddyicon.outgoing {
+  display:  none;
+  top:      $nIconHeight;
+}
+
+.buddyicon.incoming         { top: 4px; z-index: 1;}

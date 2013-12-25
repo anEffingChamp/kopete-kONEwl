@@ -13,44 +13,12 @@ body  {
 
 @import './header.scss';
 @import './incoming.scss';
+@import './footer.scss';
 
 /*#Chat                       { margin-right: 106px;}*/
 
 .copyonly                   { display: none; }
 .formatted                  { visibility: hidden; position: absolute; }
-
-.buddyicon  {
-  border:		dotted
-            #000000
-            $nPadding;
-	height:		$nIconHeight;
-	overflow:	hidden;
-	position:	fixed;
-		right:	2 * $nMargin;
-	width:		$nIconHeight;
-   z-index:	0;
-}
-
-.buddyicon:hover  {
-  height:	auto;
-	width:	100%;
-    max-width:  2 * $nIconHeight;
-}
-
-.buddyicon.outgoing {
-  display:  none;
-  top:      $nIconHeight;
-}
-
-.buddyicon.incoming         { top: 4px; z-index: 1;}
-.buddyicon img              { width: 100%; margin-bottom: -.3em;}
-.buddyicon .name            { height:1.3em; text-align:left; font-size:.8em;
-                              overflow: hidden; width: 96px; margin:0px;
-                              line-height: 1.2em; }
-.buddyicon:hover            { z-index: 10; }
-.buddyicon:hover .name      { height:auto; overflow:normal; margin-bottom:.2em;}
-.buddyicon .timestamp       { float: none; line-height: 1em;}
-.buddyicon .timestamp .date { display: inline !important; font-weight: normal;}
 
 .incoming,
 .outgoing
