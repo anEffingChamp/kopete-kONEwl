@@ -1,5 +1,6 @@
+$nIconBlock:  $nIconHeight + ( 4 * $nPadding );
+
 #header {
-  min-height:     $nIconHeight;
-  padding-right:  $nIconHeight
-                  + ( 4 * $nPadding ); 
+  min-height:     $nIconBlock;
+  padding-right:  $nIconBlock; 
 }
