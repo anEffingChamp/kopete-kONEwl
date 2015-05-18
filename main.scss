@@ -10,8 +10,11 @@ body  {
   overflow-x: hidden
               !important;
 }
-
-@import './header.scss';
+$nIconBlock:  $nIconHeight + 4*$nPadding;
+#header {
+  min-height:  $nIconBlock;
+  padding-top: $nIconBlock;
+}
 @import './incoming.scss';
 @import './footer.scss';
 
