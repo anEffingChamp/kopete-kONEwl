@@ -1,12 +1,8 @@
 .timestamp {
-  float:		  right;
-	font-size:  .5em;
-  padding:    0px
-              0px
-              $nPadding
-              $nPadding;
+  float:     right;
+	font-size: .5em;
+  padding:   0px 0px $nPadding $nPadding;
 }
-
 .timestamp .time            { font-weight: normal; padding: 0 .3em; }
 .timestamp .date            { display: none; }
 .timestamp:hover	.date,
