@@ -15,7 +15,28 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
   min-height:  $nIconBlock;
   padding-top: $nIconBlock;
 }
-@import './incoming.scss';
+.timestamp {
+  float:     right;
+	font-size: .5em;
+  padding:   0px 0px $nPadding $nPadding;
+	&:hover	.date,
+	&:active .date {
+		display:	inline;
+	}
+	.time {
+		font-weight: normal;
+		padding:     0 .3em;
+	}
+	.date {
+		display: none;
+	}
+}
+.incoming {
+	.message:nth-child( 2 ) {
+		min-height: 1.5em;
+	}
+}
+
 @import './footer.scss';
 
 /*#Chat                       { margin-right: 106px;}*/
