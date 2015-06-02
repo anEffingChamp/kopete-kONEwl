@@ -12,8 +12,7 @@ body  {
 }
 $nIconBlock:  $nIconHeight + 4*$nPadding;
 #header {
-  min-height:  $nIconBlock;
-  padding-top: $nIconBlock;
+  margin-top: $nIconBlock;
 }
 .timestamp {
   float:     right;
