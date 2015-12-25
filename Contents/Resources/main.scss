@@ -1,15 +1,17 @@
-$nMargin:	    1px;
-$nPadding:    1px;
-$nIconHeight: 60px;
+$nMargin:     0.1rem;
+$nPadding:    0.1rem;
+$nIconHeight: 3rem;
 
 /*	BASE style
  */
-
-body  {
-  margin:	    $nMargin;
-  overflow-x: hidden
-              !important;
+body {
+  margin:     $nMargin;
+  overflow-x: hidden;
 }
+.nextcontent {
+    text-indent: 2rem;
+}
+
 $nIconBlock:  $nIconHeight + 4*$nPadding;
 #header {
   margin-top: $nIconBlock;
@@ -17,7 +19,7 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .timestamp {
   float:     right;
 	font-size: .5em;
-  padding:   0px 0px $nPadding $nPadding;
+  padding:   0 0 $nPadding $nPadding;
 	&:hover	.date,
 	&:active .date {
 		display:	inline;
@@ -55,7 +57,7 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .action,
 .internal                   { line-height: .9em; padding: .3em 0 .3em .3em;
                               border: solid 1px; border-color: inherit;
-                              margin: .3em 0px;}
+                              margin: .3em 0;}
 
 .action .author             { display:block; font-size:.9em; font-weight:bold;}
 .action .message            { color: inherit; }
@@ -66,17 +68,17 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .sender .nick               { font-size: .95em; line-height: 1.1em;
                               display: block; float: left; height: 1.2em; }
 .sender .nick               { font-weight: bold; max-width: 16em;
-                              overflow: hidden; padding: 0px .3em;}
+                              overflow: hidden; padding: 0 .3em;}
 .sender .selector           { width: 8px; }
-.sender .icon               { display: none; margin: .3em 0px; }
+.sender .icon               { display: none; margin: .3em 0; }
 .sender .sid                { display: none; font-weight: normal;
                               font-style: italic; font-size: .95em }
 .sender .sid img            { height: 1em; max-height: 16px; margin: 0 .3em;
                               vertical-align: text-bottom; }
-.sender .nick:active        { position: absolute; margin: -1px 0px 0px 7px;
+.sender .nick:active        { position: absolute; margin: -1px 0 0 7px;
                               height: auto; max-width: 90%; z-index: 10;
                               background-image: url('./Variants/DARK5.png');
-                              overflow: visible; padding: 0px .3em;
+                              overflow: visible; padding: 0 .3em;
                               background-color: inherit; display: inline;
                               border: solid 1px inherit; }
 .sender .nick:active .sid   { display: block; }
@@ -84,8 +86,9 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .sender a:active,
 .sender a:focus             { outline: none; }
 
-.content
-{	display:	inline;
+.content {
+    display:    inline;
+    text-align: justify;
 }
 .message a                  { font-weight: bold; font-size: .9em;}
 
@@ -96,7 +99,7 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
  */
 
 .message a                  { text-decoration: underline; }
-.message p                  { margin: 0px; display: inline; }
+.message p                  { margin: 0; display: inline; }
 
 .content, .nextcontent,
 .action, .internal          { overflow: auto; }
@@ -135,7 +138,7 @@ body                        { background-color: #fff; }
 --------------------------------------------------------------------- */
 
 .banner                     { position: absolute; z-index: 5;
-                              top: 0px; left: 0px; width: 100%; height: 100%;
+                              top: 0; left: 0; width: 100%; height: 100%;
                               vertical-align: middle; display: table-cell; }
 .banner p                   { padding: 1em; font-size: .9em; color: #aa0000;
                               border-color: #ee0000; background-color:#ffeeee;
@@ -164,7 +167,7 @@ body                        { background-color: #fff; }
 
 /* BASE Style + This = No icons.
 ------------------------------------------------ */
-#Chat                       { margin-right: 0px; }
+#Chat                       { margin-right: 0; }
 /*.buddyicon                  { display: none; }	*/
 .rtl.sender .nick:active    { right: 11px; }
 .sender .nick:active .icon  { display: block; }
