@@ -1,6 +1,6 @@
 <div class='outgoing' style="color: %senderColor%;
 	border-color:  %senderColor%;
-    background:    %textbackgroundcolor{}%;"
+    background:    %senderColor%;"
 >
 <!--
 <div class="sender %messageDirection%">
@@ -9,7 +9,9 @@
 <span class="nick">%sender%<span class="sid"><img src="%senderStatusIcon%" />%senderScreenName%</span><img class="icon" src="%userIconPath%" /></span>
 </div>
 -->
-	<div class="content %messageDirection%">
+	<div class="content %messageDirection%"
+        style='background: %textbackgroundcolor{}%;'
+    >
 <!--        <span class="timestamp"><b class="date">%time{%x}%</b><b class="time">%time{%H:%M}%</b></span><b class="formatted">&nbsp;</b>
 -->
 		<span class="message"> %message% </span>
