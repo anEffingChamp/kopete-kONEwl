@@ -88,18 +88,21 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 
 .content {
     display:    inline;
-    text-align: justify;
 }
-.message a                  { font-weight: bold; font-size: .9em;}
-
-/*	jonathan@smalls.cc	2012 August 21
- *	I wanted to be able to see the links that people sent.
- *
- *	.message a + a              { display: none; }
- */
-
-.message a                  { text-decoration: underline; }
-.message p                  { margin: 0; display: inline; }
+.message {
+    text-align: justify;
+    a {
+        font: {
+            weight: bold;
+            size: .9em;
+        }
+        text-decoration: underline;
+    }
+    p {
+        margin: 0;
+        display: inline;
+    }
+}
 
 .content, .nextcontent,
 .action, .internal          { overflow: auto; }
