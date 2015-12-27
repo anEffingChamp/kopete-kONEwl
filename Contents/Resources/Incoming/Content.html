@@ -1,25 +1,13 @@
-<div style = "color: %senderColor%;
-			background:	%senderColor%;
-			border: %senderColor%"
+<div class='incoming' style="background-color: %textbackgroundcolor{}%
+    border: %senderColor%
+    color: %senderColor%;"
 >
-<div	class	=	"incoming"	>
-<div	style	=	'background-color:	%textbackgroundcolor{}%;
-			        border:	            inherit;'
->
-	<div	class	=	"content %messageDirection%"
-		    style	=	'padding-top:	5px;'
-	>
-		<span	class	=	"timestamp" >
-			%sender%	<br/>
-			%time%
-		</span>
-<!--
-<b class="formatted">	&nbsp;	</b>
-<span class="marker">&raquo;</span>
--->
-	<span class="message">%message%</span>
-	</div>
-</div>
-<div id="insert" /><div />
-</div>
+    <div class="content %messageDirection%">
+        <span class="timestamp">
+            %sender% <br/>
+            %time%
+        </span>
+        <span class="message"> %message% </span>
+    </div>
+    <div id="insert" /><div />
 </div>

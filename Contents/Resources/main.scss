@@ -90,7 +90,7 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
     display:    inline;
 }
 .message {
-    text-align: justify;
+    text-align: justify !important
     a {
         font: {
             weight: bold;
