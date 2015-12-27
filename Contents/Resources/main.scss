@@ -1,5 +1,5 @@
-$nMargin:     0.1rem;
-$nPadding:    0.1rem;
+$nMargin:     .25rem;
+$nPadding:    .25rem;
 $nIconHeight: 3rem;
 
 /*	BASE style
@@ -12,8 +12,13 @@ body {
   overflow-x: hidden;
 }
 %textJustify {
-    padding-right: $nPadding*2;
-    text-align:    justify;
+    padding: {
+        left:  $nPadding;
+        right: $nPadding;
+    }
+    @media screen and (min-width: 60rem) {
+        text-align: justify;
+    }
 }
 .nextcontent {
     @extend %textJustify;
@@ -25,9 +30,9 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
   margin-top: $nIconBlock;
 }
 .timestamp {
-    float:     right;
-	font-size: .5em;
-    padding:   0 1em;
+    float:        right;
+	font-size:    .5em;
+    padding-left: 1em;
 	&:hover	.date,
 	&:active .date {
 		display: inline;
