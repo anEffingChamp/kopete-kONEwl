@@ -8,7 +8,11 @@ body {
   margin:     $nMargin;
   overflow-x: hidden;
 }
+%textJustify {
+    text-align: justify;
+}
 .nextcontent {
+    @extend %textJustify;
     text-indent: 2rem;
 }
 
@@ -87,10 +91,10 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .sender a:focus             { outline: none; }
 
 .content {
-    display:    inline;
+    @extend %textJustify;
 }
 .message {
-    text-align: justify !important
+    text-align: justify;
     a {
         font: {
             weight: bold;
