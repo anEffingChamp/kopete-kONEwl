@@ -23,9 +23,12 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
   margin-top: $nIconBlock;
 }
 .timestamp {
-    float:        right;
-	font-size:    .5em;
-    padding-left: 1em;
+    float:     right;
+	font-size: .5em;
+    padding: {
+        left:  $nPadding*2;
+        right: $nPadding*2;
+    }
 	&:hover	.date,
 	&:active .date {
 		display: inline;
