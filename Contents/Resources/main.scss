@@ -8,8 +8,8 @@ $nIconHeight: 3rem;
     box-sizing: border-box;
 }
 body {
-  margin:     $nMargin;
-  overflow-x: hidden;
+    margin:     0;
+    overflow-x: hidden;
 }
 %textJustify {
     padding: $nPadding;
@@ -136,7 +136,6 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 /* Blue & Green color style. The [default|best] one...
 --------------------------------------------------------------------- */
 
-body                        { background-color: #fff; }
 .internal                   { color: #aa00aa; border-color: #eeaaee; background-color:#ffeeff; }
 .internal a:link            { color: #aa00aa; }
 .incoming                   { color: #1e5996; border-color: #c7d5e5; background-color: #f1f4f8; }
