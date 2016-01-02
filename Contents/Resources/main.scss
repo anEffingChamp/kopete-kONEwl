@@ -12,6 +12,7 @@ body {
     overflow-x: hidden;
 }
 %textJustify {
+    color:   inherit;
     padding: $nPadding;
     @media screen and (min-width: 60rem) {
         text-align: justify;
@@ -31,11 +32,10 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
         left:  $nPadding*2;
         right: $nPadding*2;
     }
-    &Sender {
+    a {
 /* %sender% generates <a>, which inherits link styles unless overridden.
  */
-        color:           inherit;
-        display:         block;
+        color: inherit;
     }
 }
 .incoming {
@@ -61,23 +61,21 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .content {
     @extend %textJustify;
     text-indent: 0;
+    a {
+        color: inherit;
+    }
+    &Message {
+        color: inherit;
+        a {
+            font: {
+                weight: bold;
+                size: .9em;
+            }
+        }
+    }
     &Next {
         @extend %textJustify;
         text-indent: 2rem;
-    }
-}
-.message {
-    @extend %textJustify;
-    a {
-        font: {
-            weight: bold;
-            size: .9em;
-        }
-        text-decoration: underline;
-    }
-    p {
-        margin:  0;
-        display: inline;
     }
 }
 
@@ -163,12 +161,9 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 
 /* Contact colors. Uses a random color for each contact in the chat.
 --------------------------------------------------------------------- */
-.nick:active a:link,
-.nick:active a:visited      { color: white !important; }
 .incoming, .incoming > DIV,
 .outgoing, .outgoing > DIV,
 .sender                     { background-image: url('Variants/ALPHA90.png'); }
-.message                    { color: #000; }
 .action, .internal          { border: dotted 1px; }
 .buddyicon                  { color: #aaa; background-color: #bbb;
                               border-color: #aaa; border: solid 1px;}
