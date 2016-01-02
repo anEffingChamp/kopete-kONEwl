@@ -19,8 +19,10 @@ body {
 }
 
 $nIconBlock:  $nIconHeight + 4*$nPadding;
-#header {
-  margin-top: $nIconBlock;
+.header {
+    margin-top: $nIconBlock;
+    &ChatName {
+    }
 }
 .timeStamp {
     float:     right;
