@@ -22,27 +22,19 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 #header {
   margin-top: $nIconBlock;
 }
-.timestamp {
+.timeStamp {
     float:     right;
-	font-size: .5em;
+    font-size: .5em;
     padding: {
         left:  $nPadding*2;
         right: $nPadding*2;
     }
-	&:hover	.date,
-	&:active .date {
-		display: inline;
-	}
-	.time {
-		font-weight: normal;
-        padding: {
-            left:  $nPadding;
-            right: $nPadding;
-        }
-	}
-	.date {
-		display: none;
-	}
+    &Sender {
+/* %sender% generates <a>, which inherits link styles unless overridden.
+ */
+        color:           inherit;
+        display:         block;
+    }
 }
 .incoming {
     background-color: inherit;
@@ -66,6 +58,7 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 }
 .content {
     @extend %textJustify;
+    text-indent: 0;
     &Next {
         @extend %textJustify;
         text-indent: 2rem;
@@ -123,8 +116,6 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .sender a:active,
 .sender a:focus             { outline: none; }
 
-.content, .nextcontent,
-.action, .internal          { overflow: auto; }
 .timestamp, .buddyicon      { cursor: default; }
 
 /* RTL Support for the BASE style
