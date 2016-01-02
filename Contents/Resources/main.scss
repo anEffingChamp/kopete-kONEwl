@@ -17,10 +17,6 @@ body {
         text-align: justify;
     }
 }
-.nextcontent {
-    @extend %textJustify;
-    text-indent: 2rem;
-}
 
 $nIconBlock:  $nIconHeight + 4*$nPadding;
 #header {
@@ -36,31 +32,61 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 	}
 	.time {
 		font-weight: normal;
-		padding:     0 .3em;
+        padding: {
+            left:  $nPadding;
+            right: $nPadding;
+        }
 	}
 	.date {
 		display: none;
 	}
 }
 .incoming {
+    background-color: inherit;
+    border: {
+        color: inherit;
+        top: {
+            style: dotted;
+            width: 1px;
+        }
+    }
+    color:            inherit;
+	clear:            both;
+	height:           auto;
+	overflow:         hidden;
 	.message:nth-child( 2 ) {
 		min-height: 1.5em;
 	}
+}
+.outgoing {
+    @extend .incoming;
+}
+.content {
+    @extend %textJustify;
+    &Next {
+        @extend %textJustify;
+        text-indent: 2rem;
+    }
+}
+.message {
+    @extend %textJustify;
+    a {
+        font: {
+            weight: bold;
+            size: .9em;
+        }
+        text-decoration: underline;
+    }
+    p {
+        margin:  0;
+        display: inline;
+    }
 }
 
 @import './footer.scss';
 
 .copyonly                   { display: none; }
 .formatted                  { visibility: hidden; position: absolute; }
-
-.incoming,
-.outgoing
-{	border-top:	solid
-			1px;
-	clear:		both;
-	height:		auto;
-	overflow:	hidden;
-}
 
 .action,
 .internal                   { line-height: .9em; padding: .3em 0 .3em .3em;
@@ -93,24 +119,6 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 .sender a:hover             { text-decoration: none; }
 .sender a:active,
 .sender a:focus             { outline: none; }
-
-.content {
-    @extend %textJustify;
-}
-.message {
-    text-align: justify;
-    a {
-        font: {
-            weight: bold;
-            size: .9em;
-        }
-        text-decoration: underline;
-    }
-    p {
-        margin: 0;
-        display: inline;
-    }
-}
 
 .content, .nextcontent,
 .action, .internal          { overflow: auto; }
@@ -162,14 +170,9 @@ body                        { background-color: #fff; }
 --------------------------------------------------------------------- */
 .nick:active a:link,
 .nick:active a:visited      { color: white !important; }
-.incoming,
-.outgoing                   { color: inherit; background-color: inherit;
-                              border-color: inherit; border-top: dotted 1px; }
 .incoming, .incoming > DIV,
 .outgoing, .outgoing > DIV,
 .sender                     { background-image: url('Variants/ALPHA90.png'); }
-.incoming a:link,
-.outgoing a:link            { color: inherit; }
 .message                    { color: #000; }
 .action, .internal          { border: dotted 1px; }
 .buddyicon                  { color: #aaa; background-color: #bbb;
