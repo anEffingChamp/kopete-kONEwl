@@ -11,6 +11,11 @@ body {
     margin:     0;
     overflow-x: hidden;
 }
+%displayBlock {
+    display: block;
+    float:   none;
+    width:   100%;
+}
 %textJustify {
     color:   inherit;
     padding: $nPadding;
@@ -33,9 +38,16 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
         right: $nPadding*2;
     }
     a {
-/* %sender% generates <a>, which inherits link styles unless overridden.
- */
+        /* %sender% generates <a>, which inherits link styles unless overridden.
+         */
         color: inherit;
+    }
+    &Date {
+        display: none;
+    }
+    .internal & {
+        @extend %displayBlock;
+        line-height: 1.5em;
     }
 }
 .incoming {
@@ -51,21 +63,22 @@ $nIconBlock:  $nIconHeight + 4*$nPadding;
 	clear:            both;
 	height:           auto;
 	overflow:         hidden;
-	.message:nth-child( 2 ) {
-		min-height: 1.5em;
-	}
 }
 .outgoing {
     @extend .incoming;
 }
 .content {
     @extend %textJustify;
+    font-weight: normal;
     text-indent: 0;
     a {
         color: inherit;
     }
     &Message {
         color: inherit;
+        &:nth-child(2) {
+            min-height: 1.5em;
+        }
         a {
             font: {
                 weight: bold;
